@@ -1,0 +1,26 @@
+[project]
+name = "fastmcp-capabilities"
+version = "0.1.0"
+description = "FastMCP exercises (ported from the Python examples)"
+authors = [
+    {name = "Luiz Carneiro"}
+]
+requires-python = ">=3.10"
+dependencies = [
+    "fastmcp>=0.1.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-asyncio>=0.21.0",
+]
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.pytest.ini_options]
+testpaths = ["01-Ping"]
+python_files = ["test_*.py", "*_test.py"]
+asyncio_mode = "auto"
